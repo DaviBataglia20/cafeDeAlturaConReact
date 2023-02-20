@@ -1,5 +1,5 @@
 export default function Button ({text,estilo}) {
     return(
-        <button className={estilo}>{text}</button>
+        <div className={estilo}>{text}</div>
     )
 }
