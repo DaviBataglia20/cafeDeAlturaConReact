@@ -4,6 +4,7 @@ import MejoresCondiciones from "../components/Section/MejoresCondiciones.jsx"
 import Novedades from "../components/Section/Novedades.jsx"
 import Preguntas from "../components/Section/Preguntas.jsx"
 import PruebaNuestroCafe from "../components/Section/PruebaNuestroCafe.jsx"
+import EntraEnContacto from "../components/Section/EntraEnContacto.jsx"
 export default function HomePage (){
     return(
         <>
@@ -13,6 +14,7 @@ export default function HomePage (){
         <Novedades/>
         <Preguntas/>
         <PruebaNuestroCafe/>
+        <EntraEnContacto/>
         </>
     )
 }
