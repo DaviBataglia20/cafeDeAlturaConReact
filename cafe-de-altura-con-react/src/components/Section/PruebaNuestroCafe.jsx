@@ -13,7 +13,7 @@ export default function PruebaNuestroCafe(){
                         </svg>
                     </div>
                 </div>
-                <img src={imageubicacion} alt="" />
+                <img src={imageubicacion} className="rounded-[30px] shadow-botones " alt="" />
             </div>
         </div>
     )
