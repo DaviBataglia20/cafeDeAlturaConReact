@@ -5,7 +5,7 @@ import Cesta from "./pages/Cesta"
 
 function App() {
   return (
-    <div className="w-screen  min-h-screen">
+    <div className="w-full  min-h-screen">
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<HomePage/>}/>
