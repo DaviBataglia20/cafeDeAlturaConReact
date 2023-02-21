@@ -1,9 +1,8 @@
 import ConditionCard from "../ConditionCard/ConditionCard.jsx";
-import cafeFondo from "../cafeBlurFoto/cafeFondo.jpg"
 
 export default function MejoresCondiciones() {
     return (
-        <div style="background-image: url('/cafeBlurFoto/cafeFondo.jpg')" className="bg-center bg-cover">
+        <div className="cafefondo">
             <div className="p-12 flex flex-col items-center gap-[24px] backdrop-blur-[1.5px]">
                 <h2 className="font-medium text-2xl leading-7 text-white">Café con las mejores condiciones</h2>
                 <div className="flex justify-center items-start gap-[24px]">
