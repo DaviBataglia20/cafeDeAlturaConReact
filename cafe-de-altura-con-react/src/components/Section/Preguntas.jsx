@@ -11,7 +11,7 @@ export default function Preguntas(){
             <div className="flex items-center p-0 gap-[16px] font-semibold text-sm leading-4 underline text-white">
                 <p className="text-white">Resolvemos tus dudas</p>
                 <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15 1.39258L19 5.39258M19 5.39258L15 9.39258M19 5.39258L1 5.39258" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 1.39258L19 5.39258M19 5.39258L15 9.39258M19 5.39258L1 5.39258" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
             </div>

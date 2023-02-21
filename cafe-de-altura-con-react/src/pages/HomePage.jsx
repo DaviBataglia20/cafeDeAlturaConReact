@@ -3,6 +3,7 @@ import DeLaPlantaATuCasa from "../components/Section/DeLaPlantaATuCasa"
 import MejoresCondiciones from "../components/Section/MejoresCondiciones.jsx"
 import Novedades from "../components/Section/Novedades.jsx"
 import Preguntas from "../components/Section/Preguntas.jsx"
+import PruebaNuestroCafe from "../components/Section/PruebaNuestroCafe.jsx"
 export default function HomePage (){
     return(
         <>
@@ -11,6 +12,7 @@ export default function HomePage (){
         <MejoresCondiciones/>
         <Novedades/>
         <Preguntas/>
+        <PruebaNuestroCafe/>
         </>
     )
 }
