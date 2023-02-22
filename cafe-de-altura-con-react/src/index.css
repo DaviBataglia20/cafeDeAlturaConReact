@@ -12,3 +12,32 @@
     background-size: cover;
 
 }
+.inputEnvio {
+    cursor: pointer;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #2A5B45;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+.inputEnvio::before {
+    content: "";
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #2A5B45;
+}
+
+.inputEnvio:checked::before {
+    transform: scale(1);
+}
