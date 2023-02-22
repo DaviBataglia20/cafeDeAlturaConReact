@@ -1,18 +1,27 @@
 import { Outlet, Link } from "react-router-dom";
 import CoffeCard from "../CoffeCard/CoffeCard";
 
+import { useEffect, useState } from "react"
+
+
 export default function Novedades(){
+    const[products,setProducts]= useState([])
+    useEffect(() => {
+        fetch('https://cafe-de-altura-api.vercel.app/api/products')
+          .then(res => res.json())
+          .then(data => setProducts(data.products))
+      }, []);
+      console.log(products)
     return(
         <>
         <div className="p-10 bg-white flex flex-col items-center gap-[40px]">
-            <h3 className="text-green-800 font-semibold text-xl leading-6 text-shadow-texto-sombra">Novedades</h3>
+            <h3 className="text-green-800 font-semibold text-xl leading-6 text-shadow-texto-sombra">{(window.location.href == "http://localhost:3000/")?"Novedades":"Ultimos Origenes"}</h3>
             <div className="flex flex-wrap flex-row justify-center items-center p-0 gap-[24px]">
-                <CoffeCard/>
-                <CoffeCard/>
-                <CoffeCard/>
-                <CoffeCard/>
-                <CoffeCard/>
-                <CoffeCard/>
+                    {((window.location.href == "http://localhost:3000/")?products.slice(0,4):products).map((product, i) => {
+                        return (
+                            <CoffeCard _id={product._id} available={product.available} brand={product.brand} img_url={product.img_url} price={product.price} key={i}/>
+                        )
+                    })}
             </div>
             <Link to="/Shop" className="cursor-pointer flex flex-row items-center p-0 gap-[16px]">
                     <p className="text-black not-italic font-semibold text-sm leading-4 text-shadow-texto-novedades underline">Ver Todos</p>
