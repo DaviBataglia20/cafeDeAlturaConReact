@@ -5,6 +5,7 @@ import Novedades from "../components/Section/Novedades.jsx"
 import Preguntas from "../components/Section/Preguntas.jsx"
 import PruebaNuestroCafe from "../components/Section/PruebaNuestroCafe.jsx"
 import EntraEnContacto from "../components/Section/EntraEnContacto.jsx"
+import Footer from "../components/Section/Footer.jsx"
 export default function HomePage (){
     return(
         <>
@@ -15,6 +16,7 @@ export default function HomePage (){
         <Preguntas/>
         <PruebaNuestroCafe/>
         <EntraEnContacto/>
+        <Footer/>
         </>
     )
 }
