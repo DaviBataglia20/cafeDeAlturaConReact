@@ -1,4 +1,5 @@
 export default function Envio({titulo,texto,total}){
+  
     return(
         <div className="box-content flex flex-row items-center p-0 h-8 gap-[16px] w-[776px]">
             <input className="inputEnvio"  checked  type="radio"  name="tipoDeEnvio" id={titulo} value = ""/>
