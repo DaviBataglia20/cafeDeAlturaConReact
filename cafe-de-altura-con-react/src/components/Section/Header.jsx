@@ -3,8 +3,11 @@ import NavLink from "../NavLink/Navlink"
 import IconoTelefono from "../IconoTelefono/IconoTelefono"
 import Button from "../Button/Button"
 import IconoCesta from "../IconoCesta/IconoCesta"
-
+import { useContext, } from "react"
+import { CartContext } from "../../App"
+import CircleCount from "../CircleCount/CircleCount"
 export default function Header(){
+    const {counter} =useContext(CartContext)
     return(
     <div className="w-full bg-gray-900 flex flex-row justify-between items-center py-3 px-10 shadow-header">
        <LogoCafe/>
@@ -24,6 +27,7 @@ export default function Header(){
         </div>
         <div className="flex flex-row items-center p-0 w-12 h-6 cursor-pointer gap-2">
             <IconoCesta/>
+            <CircleCount counter={counter}/>
         </div>
     </div>
     )
