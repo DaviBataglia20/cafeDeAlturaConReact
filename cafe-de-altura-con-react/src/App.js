@@ -10,18 +10,21 @@ function App() {
 
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
  
-
+  const[counter,setCounter] = useState("ola")
 
   useEffect(() => {
-    console.log(cart)
     localStorage.setItem('cart', JSON.stringify(cart))
+    setCounter(prev => {
+      const len = cart.reduce((acc,e) => acc += e.quantity , 0)
+      return len
+  })
   },[cart])
 
 
   return (
     <div className="w-full  min-h-screen">
       <BrowserRouter>
-        <CartContext.Provider value={{cart, setCart}}>
+        <CartContext.Provider value={{cart, setCart,counter}}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="Shop" element={<Shop />} />

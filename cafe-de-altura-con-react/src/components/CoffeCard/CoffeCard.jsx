@@ -9,9 +9,9 @@ const {setCart} =useContext(CartContext)
 
         setCart( prev => {
             const cart = [...prev]
-            const Index = cart.findIndex(e => e.brand === brand)
-            if(Index != -1){
-                cart[Index].quantity += 1
+            const i = cart.findIndex(e => e.brand === brand)
+            if(i != -1){
+                cart[i].quantity += 1
                 return cart
             }else{
                 cart.push({
