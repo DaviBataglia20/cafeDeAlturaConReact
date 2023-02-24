@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage"
 import Shop from "./pages/Shop"
 import Cesta from "./pages/Cesta"
+import Checkout from "./pages/Checkout";
 
 export const CartContext = createContext();
 
@@ -20,15 +21,18 @@ function App() {
   })
   },[cart])
 
+  const [envio,setEnvio] = useState("GRATIS");
+
 
   return (
-    <div className="w-full  min-h-screen">
+    <div className="w-full  min-h-screen relative">
       <BrowserRouter>
         <CartContext.Provider value={{cart, setCart,counter}}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="Shop" element={<Shop />} />
-            <Route path="Cesta" element={<Cesta />} />
+            <Route path="Cesta" element={<Cesta envio={envio} setEnvio={setEnvio} />} />
+            <Route path="Checkout" element={<Checkout envio={envio} />} />
           </Routes>
         </CartContext.Provider>
       </BrowserRouter>

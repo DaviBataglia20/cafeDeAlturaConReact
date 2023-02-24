@@ -1,7 +1,7 @@
 import Pregunta from "../Pregunta/Pregunta"
 export default function Preguntas(){
     return(
-       <div className="bg-green-800 flex flex-col items-center py-12 px- gap-[24px]">
+       <div className="bg-[#2A5B45] flex flex-col items-center py-12 px- gap-[24px]">
             <h2 className="font-medium text-2xl leading-7 text-white">Preguntas frecuentes</h2>
             <div className="flex flex-col items-center p-0 gap-[16px]">
                 <Pregunta titulo={"¿Cómo hago el pedido?"} texto={"Selecciona el café que desees probar y completa el proceso de compra. Si lo prefieres, te preguntaremos cada cuánto quieres que te lo mandemos a casa y así nunca te quedarás sin café."}/>

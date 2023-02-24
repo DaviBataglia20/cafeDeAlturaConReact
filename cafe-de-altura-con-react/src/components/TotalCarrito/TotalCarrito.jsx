@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import Button from "../Button/Button"
 import { useEffect,useState } from "react"
 export default function TotalCarrito({cart,envio}){
 
     const [subtotal,setSubtotal] = useState()
     const total = (envio === "GRATIS")?subtotal:(subtotal + 9)
-
+    const products = <><Link to="/Checkout"><Button estilo={"flex flex-row items-center justify-center w-32 h-10 bg-green-800 rounded no-underline not-italic font-semibold text-sm leading-4 text-white"} text={"Ir a checkout"}/></Link>
+    <Link to ="/Shop"><Button m estilo={"flex flex-row items-center justify-center w-40 h-10 rounded bg-transparent no-underline not-italic font-semibold text-sm leading-4 text-green-800"} text={"Seguir comprando"} /></Link></>
+    
     useEffect(() => {
         
         setSubtotal(prev => {
@@ -40,8 +43,10 @@ export default function TotalCarrito({cart,envio}){
                 </div>
             </div>
             <div className="flex flex-row items-start p-0 h-10 gap-[16px] w-[310px]">
-                <Button estilo={"flex flex-row items-center justify-center w-32 h-10 bg-green-800 rounded no-underline not-italic font-semibold text-sm leading-4 text-white"} text={"Ir a checkout"}/>
-                <Button estilo={"flex flex-row items-center justify-center w-40 h-10 rounded bg-transparent no-underline not-italic font-semibold text-sm leading-4 text-green-800"} text={"Seguir comprando"} />
+
+            {(window.location.href == "http://localhost:3000/Checkout")?<Link to="/Sucess"><Button estilo={"flex flex-row items-center justify-center w-[200px] h-10 bg-green-800 rounded no-underline not-italic font-semibold text-sm leading-4 text-white"} text={"Pagar y realizar pedido"}/></Link>:products}
+               {/*  <Link to="/Checkout"><Button estilo={"flex flex-row items-center justify-center w-32 h-10 bg-green-800 rounded no-underline not-italic font-semibold text-sm leading-4 text-white"} text={"Ir a checkout"}/></Link>
+                <Button m estilo={"flex flex-row items-center justify-center w-40 h-10 rounded bg-transparent no-underline not-italic font-semibold text-sm leading-4 text-green-800"} text={"Seguir comprando"} /> */}
             </div>
         </div>
     )

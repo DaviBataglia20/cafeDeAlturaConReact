@@ -1,7 +1,7 @@
 export default function EntraEnContacto(){
     return(
 <div className="box-border flex flex-row justify-center items-center bg-[#E3DED7] py-0 px-[40px]">   
-    <div className="flex flex-row justify-center items-center p-0 gap-[24px] opacity-90	 ">
+    <div className="flex flex-row justify-between items-center p-0 gap-[24px] opacity-90 w-full ">
         <div className="flex flex-col items-start py-[116px] px-0 gap-[32px]">
             <div className="flex flex-col items-start p-0 gap-[12px]">
                 <h3 className="font-semibold text-lg leading-6 text-gray-900">Entra en contacto con nosotros</h3>
@@ -30,7 +30,7 @@ export default function EntraEnContacto(){
                 <p>¿Buscas un trabajo?<a className="font-semibold text-black underline cursor-pointer">Ver nuestras ofertas.</a></p>
             </div>
         </div>
-        <div className="flex flex-col justify-center items-center bg-white shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">
+        <div className="flex flex-col justify-between items-center bg-white shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">
             <form action="" className="flex flex-col items-start py-[32px] px-[67px] gap-[24px] ">
                 <div className="flex flex-col items-start p-0 w-full gap-[4px]">
                     <label className="font-normal text-xs leading-4 text-gray-800" htmlFor="name">Nombre completo</label>

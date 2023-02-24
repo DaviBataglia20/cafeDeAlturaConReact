@@ -2,14 +2,15 @@ import CestaProducto from "../CestaProducto/CestaProducto"
 import Envio from "../Envio/Envio"
 import TotalCarrito from "../TotalCarrito/TotalCarrito"
 import ContadorCesta from "../ContadorCesta/ContadorCesta"
-import { useContext, useState,useEffect } from "react"
+import { useContext,useEffect } from "react"
 import { CartContext } from "../../App"
-export default function Cestap (){
-    const [envio,setEnvio] = useState("GRATIS");
+
+export default function Cestap ({envio,setEnvio}){
     useEffect(() => {
-        console.log(envio)
-      },[envio])
-   
+      
+    },[envio])
+ 
+
 
     const {cart} =useContext(CartContext)
 
