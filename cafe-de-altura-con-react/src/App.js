@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage"
 import Shop from "./pages/Shop"
 import Cesta from "./pages/Cesta"
 import Checkout from "./pages/Checkout";
+import Sucess from "./pages/Sucess";
 
 export const CartContext = createContext();
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="Shop" element={<Shop />} />
             <Route path="Cesta" element={<Cesta envio={envio} setEnvio={setEnvio} />} />
             <Route path="Checkout" element={<Checkout envio={envio} />} />
+            <Route path="Sucess" element={<Sucess envio={envio}/>}/>
           </Routes>
         </CartContext.Provider>
       </BrowserRouter>
