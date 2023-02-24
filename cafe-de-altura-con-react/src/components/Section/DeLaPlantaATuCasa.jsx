@@ -3,7 +3,7 @@ import FotoMejorCafe from "../FotoMejorCafe/FotoMejorCafe"
 export default function DeLaPlantaATuCasa(){
     return(
     <div className="px-12 py-10 bg-MejorCafe">
-        <div className="flex justify-start items-center gap-6 ">
+        <div className="flex justify-between items-center gap-6 ">
             <div className="flex flex-col gap-4">
             <h3 className="text-green-800 font-semibold text-lg leading-6 text-shadow-texto-sombra">De la planta a tu taza</h3>
                     <h1 className="font-semibold text-4xl text-shadow-texto-sombra">El mejor café del mundo, ahora en tu casa</h1>
