@@ -3,7 +3,7 @@ export default function EntraEnContacto(){
 <div className="box-border flex flex-row justify-center items-center bg-[#E3DED7] py-0 px-[40px]">   
     <div className="flex flex-row justify-between items-center p-0 gap-[24px] opacity-90 w-full ">
         <div className="flex flex-col items-start py-[116px] px-0 gap-[32px]">
-            <div className="flex flex-col items-start p-0 gap-[12px]">
+            <div id="#formularioLink" className="flex flex-col items-start p-0 gap-[12px]">
                 <h3 className="font-semibold text-lg leading-6 text-gray-900">Entra en contacto con nosotros</h3>
                 <p className="font-normal text-sm leading-4 text-gray-600">Si tienes dudas, ponte en contacto con nosotros a través del formulario y te responderemos lo antes posible.</p>
             </div>
