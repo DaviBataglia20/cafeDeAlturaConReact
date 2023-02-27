@@ -13,10 +13,10 @@ export default function Header(){
        <LogoCafe/>
        <div className="flex flex-row items-center gap-8 p-0">
         <NavLink path={"/Shop"} text={"Tienda"}/>
-        <NavLink path={"/#formularioLink"} text={"Suscripción"}/>
-        <NavLink path={"/#formularioLink"} text={"Para empresas"}/>
-        <NavLink path={"/#formularioLink"} text={"Sobre nosotros"}/>
-        <NavLink path={"/#formularioLink"} text={"Contacto"}/>
+        <NavLink path={"#formularioLink"} text={"Suscripción"}/>
+        <NavLink path={"#formularioLink"} text={"Para empresas"}/>
+        <NavLink path={"#formularioLink"} text={"Sobre nosotros"}/>
+        <NavLink path={"#formularioLink"} text={"Contacto"}/>
        </div>
        <div className="flex gap-6 items-center">
             <div className="flex gap-px items-center">
