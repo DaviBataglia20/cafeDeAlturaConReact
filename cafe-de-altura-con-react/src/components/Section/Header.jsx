@@ -3,13 +3,16 @@ import NavLink from "../NavLink/Navlink"
 import IconoTelefono from "../IconoTelefono/IconoTelefono"
 import Button from "../Button/Button"
 import IconoCesta from "../IconoCesta/IconoCesta"
-import { useContext, } from "react"
+import { useContext, useState } from "react"
 import { CartContext } from "../../App"
 import CircleCount from "../CircleCount/CircleCount"
+import Login from "../Login/Login"
 export default function Header(){
+    const[click,setClick] = useState(false)
+    const[first,setFirst] = useState(false)
     const {counter} =useContext(CartContext)
     return(
-    <div className="w-full bg-gray-900 flex flex-row justify-between items-center py-3 px-10 shadow-header">
+    <div className="w-full bg-gray-900 flex flex-row justify-between items-center py-3 px-10 shadow-header header">
        <LogoCafe/>
        <div className="flex flex-row items-center gap-8 p-0">
         <NavLink path={"/Shop"} text={"Tienda"}/>
@@ -23,7 +26,7 @@ export default function Header(){
                 <IconoTelefono/>
                 <p className="text-white no-underline font-semibold text-sm leading-4">+34 919 49 05 18</p>
             </div>
-            <Button estilo={"cursor-pointer bg-gris-clarito rounded text-white font-semibold text-sm leading-4 py-3 px-6 border-solid rounded border-2 border-gris-clarito"} text={"Iniciar sesión"}/>
+            <div  onClick={()=> setClick(!click)}>{click?<Login/>:<Button estilo={"cursor-pointer bg-gris-clarito rounded text-white font-semibold text-sm leading-4 py-3 px-6 border-solid rounded border-2 border-gris-clarito"} text={"Iniciar sesión"}/>}</div>
         </div>
         <div className="flex flex-row items-center p-0 w-12 h-6 cursor-pointer gap-2">
             <IconoCesta/>
